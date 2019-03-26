@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet" href="signup.css">
+<style>
+body{
+  margin-left: 200px;
+}
+</style>
+<script src="sad.js"></script>
+<style type="text/css">
+.sad{
+  display: inline-block;
+}
+</style>
+</head>
+<body>
+
+<div id="hee">
+                 <div class="imgcontainer">
+                    <center><a href="welcomeAdmin.html"><img src="LOGO.png" alt="banka logo" class="avatar"></a></center>
+                     </div>
+            
+
+</div>
+</li>            
+        </div>
+          <div id="signup" class="sad" >
+            <form action="" style="border:1px solid #ccc" name="form1">
+  <div class="container">
+    <h3><p>Opening Account</p></h3>
+    
+    <hr>
+
+    <label for="lname"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter your Last Name" name="lname" id="lname" required >
+
+       <label for="lname"><b>First  Name</b></label>
+    <input type="text" placeholder="Enter your First Name" name="fname" id="fname" required >
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required onfocusout="ValidateEmail()">
+
+    <label for="usertype"><b>Select User Type</b></label>
+    <select>
+      <option value="select"></option>
+      <option value="client">CACHIER</option>
+      <option value="staff">ADMIN</option>  
+     </select> </br></br>
+      
+      <label for="stafftype"><b>Check if user is Admin</b></label> <input type="checkbox" id="isadmin" ></br></br>
+
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw"  id="pwd" required onfocusout="CheckPassword()">
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="pwdr" required onfocusout="pwdcheck()">
+    
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>  
+   
+
+    <div class="clearfix">
+      <button type="reset" class="cancelbtn" onclick="reset()">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+      
+    </div>
+  </div>
+</form>
+</div>   
+
+  
+
+
+</body>
+</html>
