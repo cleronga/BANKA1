@@ -21,6 +21,56 @@
            }
         }
       }   
+      function CheckPassword(){
+               var inpu=document.getElementById("pwd");
+                var paswd=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+                if(inpu.value.match(paswd)){  
+                  document.getElementById("pwdn").style.backgroundColor = "white";
+                  //inpu.addEventListener("focusout", myBlurFunction);
+                  return true;
+
+                } else{ 
+                  myFunction1();
+                 // alert('Password does not meet requirements');
+                   document.getElementById("pwdn").style.backgroundColor = "red";
+                  
+                    }
+                } 
+
+                function pwdcheck(){
+                  var input1=document.getElementById("pwdn").value;
+                  var input2=document.getElementById("pwdr").value;
+                  if(input1==input2){
+                    displaycopwd1();
+                    document.getElementById("pwdr").style.backgroundColor = "white";
+                    //x.addEventListener("focusout", myBlurFunction)
+                    return true;
+
+                  }else{
+                    displaycopwd()
+                   // document.getElementById("pwdr").InnerHTML="Passwords does not mutch";
+                  // alert('Password does not meet requirements');
+                    document.getElementById("pwdr").style.backgroundColor = "red";
+                  }
+                  //alert(input2+" treh "+input1);
+
+                }
+                         function myFunction1() {  
+          var text = document.getElementById("npwd");  
+          text.style.display = "block"; 
+          }
+          function displaycopwd() {  
+          var text = document.getElementById("copwd");  
+          text.style.display = "block"; 
+          }
+         function myFunction2() {  
+          var text = document.getElementById("npwd");  
+          text.style.display=none; 
+          }
+                   function displaycopwd1() {  
+          var text = document.getElementById("copwd");  
+          text.style.display=none; 
+          }
      </script>
      <style>
      body{
@@ -45,7 +95,7 @@
     </head>
     <body>
       <div >
-       <center>  <img src="image\LOGO.png" style="text-align: center"> </center>
+       <center>  <img src="LOGO.png" style="text-align: center"> </center>
       </div>
 
         <div id="hee">           
@@ -94,6 +144,33 @@
              
                       </div>
 </td>
+        <td>           <div class="pn">
+              <form>
+            <h4>CHANGE PASSWORD</h4>
+            <table border="0">
+              <tr>
+                <td><label for="First Name"><b>Current Password </b></label></td>
+                <td> <input type="password" placeholder="Current Password" name="psw"  id="pwd" required></td>
+                
+              </tr>
+                            <tr>
+                <td> <label for="new Password"><b>New Password </b></label></td>
+                <td><input type="password" placeholder="New Password" name="pswn"  id="pwdn" required onfocusout="CheckPassword()"></td>
+                <td><p id="npwd" style="display:none; color:red">Invalid password</p></td>
+              </tr>
+                <tr>
+                <td><label for="Confirm Password"><b>Comfirm Password</b></label></td>
+                <td><input type="password" placeholder="Repeat Password" name="psw-repeat" id="pwdr" required onfocusout="pwdcheck()"></td>
+                <td><p id="copwd" style="display:none; color:red">password does not match</p></td>
+              </tr>
+                              <tr>
+                <td><button type="reset" class="cancelbtn" >Cancel</button></td>
+                <td> <button type="submit" class="signupbtn">Change Password</button></td>
+              </tr>
+            </table>     
+             </form>
+                      </div>
+                    </td>
           </tr>
          </table>
         
