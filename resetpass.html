@@ -10,6 +10,18 @@
           var text = document.getElementById("text");  
           text.style.display = "block"; 
           }
+             function ValidateEmail(){
+              var inp=document.getElementById("email");
+               var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+               if(inp.value.match(mailformat)) {
+               
+              }else{
+                alert("You have entered an invalid email address!");
+               document.getElementById("email").style.backgroundColor = "red";             
+
+                
+                }
+              }
         </script>
 
     </head>
@@ -31,14 +43,14 @@
 
   <div class="container">
     <label for="email"><b>Enter your Email </b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input type="text" placeholder="Enter Email" name="email"  onfocousout="ValidateEmail()" required>
 
         
     <button type="submit" onclick="myFunction()">RESET PASSWORD</button>
     
 
 
-<p id="text" style="display:none">Checkbox  your Email to resset your Password</p>
+<p id="text" style="display:none; color:green">Checkbox  your Email box to reset your Password</p>
            </div>
            
          </div>
