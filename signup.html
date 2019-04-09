@@ -6,56 +6,9 @@
          <link rel="stylesheet" href="style.css">
          <link rel="stylesheet" href="login.css">
          <link rel="stylesheet" href="signup.css">
-         <script type="text/javascript">
-             function ValidateEmail(){
-              var inp=document.getElementById("email");
-               var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-               if(inp.value.match(mailformat)) {
-                
-                return true;
-              }else{
-                alert("You have entered an invalid email address!");
-               document.getElementById("email").style.backgroundColor = "red";             
+         <script src="vikidation.js"></script>  
 
-                
-                }
-              }
-               
-               function CheckPassword(){
-               var inpu=document.getElementById("pwd");
-                var paswd=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
-                if(inpu.value.match(paswd)){  
-                  document.getElementById("pwd").style.backgroundColor = "";
-                  //inpu.addEventListener("focusout", myBlurFunction);
-                  return true;
-
-                } else{ 
-                  //alert('Password does not meet requirements');
-                   document.getElementById("pwd").style.backgroundColor = "red";
-                  
-                    }
-                }  
-                function pwdcheck(){
-                  var input1=document.getElementById("pwd").value;
-                  var input2=document.getElementById("pwdr").value;
-                  if(input1==input2){
-                    document.getElementById("pwdr").style.backgroundColor = "";
-                    //x.addEventListener("focusout", myBlurFunction)
-                    return true;
-
-                  }else{
-                   // document.getElementById("pwdr").InnerHTML="Passwords does not mutch";
-                    document.getElementById("pwdr").style.backgroundColor = "red";
-                  }
-                  //alert(input2+" treh "+input1);
-
-                }
-                function reset() {
-                 document.getElementById("pwd").style.backgroundColor = ""; 
-                 document.getElementById("pwdr").style.backgroundColor = ""; 
-                }
-
-       </script>
+         
       
     </head>
     <body>
@@ -70,7 +23,7 @@
         </div>
         <div id="bos">
           <div id="signup">
-            <form action="" style="border:1px solid #ccc" name="form1">
+            
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
@@ -78,10 +31,11 @@
     <div class="imgcontainer">
     <img src="LOGO.png" alt="banka logo" class="avatar">
   </div>
+  <form action="login.html">
     <label for="lname"><b>Last Name</b></label>
     <input type="text" placeholder="Enter your Last Name" name="lname" id="lname" required >
 
-       <label for="lname"><b>First  Name</b></label>
+       <label for="fname"><b>First  Name</b></label>
     <input type="text" placeholder="Enter your First Name" name="fname" id="fname" required >
 
     <label for="email"><b>Email</b></label>
@@ -92,21 +46,21 @@
     <label for="psw-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="pwdr" required onfocusout="pwdcheck()">
     
-    <label>
-      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-    </label>
-    
+     
     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
     <div class="clearfix">
       <button type="reset" class="cancelbtn" onclick="reset()">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <button type="submit" class="signupbtn" >Sign Up</button>
       <span>already have account? click <a href="login.html">here</a> to sign in</span>
+      </form>
     </div>
   </div>
-</form>
+
 </div>
+
         </div>
-       
+
+       <div id="data"></div>
     </body>
 </htm
